@@ -1,6 +1,6 @@
-package br.dev.ibs.springbatch1.step;
+package br.dev.ibs.springbatch1.jobs.parimpar.step;
 
-import br.dev.ibs.springbatch1.writer.ImprimeWriter;
+import br.dev.ibs.springbatch1.jobs.parimpar.writer.ImprimeWriter;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemProcessor;

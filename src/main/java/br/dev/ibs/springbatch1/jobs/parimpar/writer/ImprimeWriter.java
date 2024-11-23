@@ -1,4 +1,4 @@
-package br.dev.ibs.springbatch1.writer;
+package br.dev.ibs.springbatch1.jobs.parimpar.writer;
 
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.stereotype.Component;

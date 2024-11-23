@@ -1,4 +1,4 @@
-package br.dev.ibs.springbatch1.processor;
+package br.dev.ibs.springbatch1.jobs.parimpar.processor;
 
 import org.springframework.batch.item.function.FunctionItemProcessor;
 import org.springframework.context.annotation.Bean;

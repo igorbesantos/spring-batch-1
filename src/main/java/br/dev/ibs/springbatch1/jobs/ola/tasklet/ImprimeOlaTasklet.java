@@ -1,4 +1,4 @@
-package br.dev.ibs.springbatch1.tasklet;
+package br.dev.ibs.springbatch1.jobs.ola.tasklet;
 
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.configuration.annotation.StepScope;

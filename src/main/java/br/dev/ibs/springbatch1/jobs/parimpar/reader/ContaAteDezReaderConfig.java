@@ -1,4 +1,4 @@
-package br.dev.ibs.springbatch1.reader;
+package br.dev.ibs.springbatch1.jobs.parimpar.reader;
 
 import org.springframework.batch.item.support.IteratorItemReader;
 import org.springframework.context.annotation.Bean;

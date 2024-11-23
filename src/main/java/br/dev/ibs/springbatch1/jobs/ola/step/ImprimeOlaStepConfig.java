@@ -1,4 +1,4 @@
-package br.dev.ibs.springbatch1.step;
+package br.dev.ibs.springbatch1.jobs.ola.step;
 
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;

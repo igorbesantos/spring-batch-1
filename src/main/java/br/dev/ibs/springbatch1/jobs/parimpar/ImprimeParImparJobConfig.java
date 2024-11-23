@@ -1,4 +1,4 @@
-package br.dev.ibs.springbatch1.job;
+package br.dev.ibs.springbatch1.jobs.parimpar;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
