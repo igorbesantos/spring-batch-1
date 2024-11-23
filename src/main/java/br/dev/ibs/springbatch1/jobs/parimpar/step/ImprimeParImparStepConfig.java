@@ -21,11 +21,16 @@ public class ImprimeParImparStepConfig {
 	/**
 	 * O tamanho do chuck define quantos registros serão processados por transação.
 	 * Experimente executar valores diferentes aqui, como 1 vs 10, e depois consulte a quantidade de transações usadas na excução do job.
+	 * <p>
 	 * É possível consultar as transações assim:
 	 * select * from BATCH_STEP_EXECUTION WHERE STEP_NAME = 'imprimeParImparStep';
 	 * Verifique a quantidade de commits na coluna COMMIT_COUNT.
-	 * Criar uma transação é custoso, logo, é ideal para performance manter o tamanho do chuck maior.
-	 * Em contrapartida, quanto maior o tamanho do chuck mais memória será usada na aplicação e na base.
+	 * <p>
+	 * Criar uma transação é custoso, logo, é ideal para o desempenho manter o tamanho do chuck maior.
+	 * <p>
+	 * Em contrapartida, quanto maior o tamanho do chuck mais memória será usada na aplicação e na base,
+	 * além disso, quanto maior o chunk, mais registros terão que ser reprocessados em caso de falha na transação.
+	 * <p>
 	 * Então é necessário encontrar o equilíbrio entre esses dois lados.
 	 */
 	@Bean

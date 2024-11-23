@@ -23,8 +23,8 @@ public class ImprimeOlaJobConfig {
 	 * Usar o incrementador ".incrementer(new RunIdIncrementer())" pode:
 	 * - Permitir que o mesmo job seja executado novamente com os mesmos parâmetros;*
 	 * * Normalmente, ao gravar os metadados do spring batch,
-	 * o mesmo job não pode ser executdo mais de uma vez com os mesmos parâmetros.
-	 * - Impedir que um job seja re-executado após um erro, por exemplo, pois sempre será criado um novo job.
+	 * o mesmo job não pode ser executado mais de uma vez com os mesmos parâmetros.
+	 * - Impedir que um job seja reexecutado após um erro, por exemplo, pois sempre será criado um novo job.
 	 * Logo, essa configuração deve ser utilizada com CUIDADO!!!
 	 * Aqui, ela foi adicionada por aprendizado e praticidade na execução de testes.
 	 *

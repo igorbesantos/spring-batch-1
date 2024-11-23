@@ -25,6 +25,8 @@ Há um script de consultas [aqui](./consultas-metadados-spring-batch.sql), de me
 
 Usa uma tasklet para imprimir no log uma saudação ao nome informado no parâmetro ``nome``.
 
+Verificar configuração do job na classe [ImprimeOlaJobConfig.java](./src/main/java/br/dev/ibs/springbatch1/jobs/ola/ImprimeOlaJobConfig.java) &#x2757;.
+
 **Steps:**
 1. [imprimeOlaStep](./src/main/java/br/dev/ibs/springbatch1/jobs/ola/step/ImprimeOlaStepConfig.java)
     - [ImprimeOlaTasklet](./src/main/java/br/dev/ibs/springbatch1/jobs/ola/tasklet/ImprimeOlaTasklet.java) &#x2757;
