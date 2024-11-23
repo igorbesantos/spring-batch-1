@@ -13,7 +13,7 @@ Na descrição dos jobs, os passos mais importantes estarão marcados com um &#x
 A aplicação espera argumentos ao ser executada, segue exemplo:
 
 
-``` nome=Igor arquivoClientes=file:files/clientes-largura-fixa.txt ```
+``` nome=Igor arquivoLarguraFixaClientes=file:files/clientes-largura-fixa.txt ```
 
 Há um script de consultas [aqui](./consultas-metadados-spring-batch.sql), de metadados do spring batch que serão gravados no h2.
 
@@ -45,7 +45,7 @@ Lê em _chunks_ números de 1 a 10 e imprime quais são pares ou ímpares.
 ### arquivoLarguraFixaJob
 
 Lê um arquivo de largura fixa (arquivo de exemplo em [files/clientes-largura-fixa.txt](./files/clientes-largura-fixa.txt)),
-que deve ter o seu caminho informado no parâmetro ``arquivoClientes`` e imprime os clientes lidos no log, 
+que deve ter o seu caminho informado no parâmetro ``arquivoLarguraFixaClientes`` e imprime os clientes lidos no log, 
 utilizando um ``FlatFileItemReader``.
 
 **Steps:**

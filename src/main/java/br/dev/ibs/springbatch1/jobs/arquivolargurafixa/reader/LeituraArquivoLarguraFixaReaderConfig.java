@@ -16,11 +16,11 @@ public class LeituraArquivoLarguraFixaReaderConfig {
     @StepScope
     @Bean
     public FlatFileItemReader<Cliente> leituraArquivoLarguraFixaReader(
-            @Value("#{jobParameters['arquivoClientes']}") Resource arquivoClientes
+            @Value("#{jobParameters['arquivoLarguraFixaClientes']}") Resource arquivoLarguraFixaClientes
     ) {
         return new FlatFileItemReaderBuilder<Cliente>()
                 .name("leituraArquivoLarguraFixaReader")
-                .resource(arquivoClientes)
+                .resource(arquivoLarguraFixaClientes)
                 .fixedLength()
                 .columns(new Range[]{new Range(1, 10), new Range(11, 20), new Range(21, 23), new Range(24, 43)})
                 .names("nome", "sobrenome", "idade", "email")

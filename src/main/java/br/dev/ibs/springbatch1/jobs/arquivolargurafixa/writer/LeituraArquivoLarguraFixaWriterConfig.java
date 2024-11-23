@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
 public class LeituraArquivoLarguraFixaWriterConfig {
 	@Bean
 	public ItemWriter<Cliente> leituraArquivoLarguraFixaWriter() {
-		return items -> items.forEach(System.out::println);
+		return items -> items.forEach(item -> System.out.printf("[LARGURA FIXA] %s%n", item));
 	}
 }
