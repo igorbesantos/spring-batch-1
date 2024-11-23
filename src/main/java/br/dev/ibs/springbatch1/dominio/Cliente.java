@@ -1,4 +1,4 @@
-package br.dev.ibs.springbatch1.jobs.arquivolargurafixa.dominio;
+package br.dev.ibs.springbatch1.dominio;
 
 public class Cliente {
 	private String nome;

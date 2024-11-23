@@ -1,6 +1,6 @@
 package br.dev.ibs.springbatch1.jobs.arquivolargurafixa.step;
 
-import br.dev.ibs.springbatch1.jobs.arquivolargurafixa.dominio.Cliente;
+import br.dev.ibs.springbatch1.dominio.Cliente;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemReader;

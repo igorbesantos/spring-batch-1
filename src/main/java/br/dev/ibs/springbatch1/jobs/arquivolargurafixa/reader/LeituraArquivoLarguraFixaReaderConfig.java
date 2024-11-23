@@ -1,6 +1,6 @@
 package br.dev.ibs.springbatch1.jobs.arquivolargurafixa.reader;
 
-import br.dev.ibs.springbatch1.jobs.arquivolargurafixa.dominio.Cliente;
+import br.dev.ibs.springbatch1.dominio.Cliente;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
