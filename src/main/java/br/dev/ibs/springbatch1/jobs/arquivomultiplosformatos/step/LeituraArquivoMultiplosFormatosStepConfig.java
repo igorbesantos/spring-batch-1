@@ -1,11 +1,10 @@
 package br.dev.ibs.springbatch1.jobs.arquivomultiplosformatos.step;
 
-import br.dev.ibs.springbatch1.jobs.arquivomultiplosformatos.reader.ArquivoClienteTransacaoReader;
+import br.dev.ibs.springbatch1.dominio.Cliente;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.ItemStreamReader;
 import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.file.MultiResourceItemReader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,13 +20,13 @@ public class LeituraArquivoMultiplosFormatosStepConfig {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
 	public Step leituraArquivoMultiplosFormatosStep(
-			ItemReader leituraArquivoMultiplosFormatosReader,
+			MultiResourceItemReader<Cliente> multiplosArquivosClienteTransacaoReader,
 			ItemWriter leituraArquivoMultiplosFormatosWriter
 	) {
 		return stepBuilderFactory
 				       .get("leituraArquivoMultiplosFormatosStep")
 				       .chunk(1)
-				       .reader(new ArquivoClienteTransacaoReader((ItemStreamReader<Object>) leituraArquivoMultiplosFormatosReader))
+				       .reader(multiplosArquivosClienteTransacaoReader)
 				       .writer(leituraArquivoMultiplosFormatosWriter)
 				       .build();
 	}

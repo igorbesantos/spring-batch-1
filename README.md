@@ -14,7 +14,7 @@ A aplicação espera argumentos ao ser executada, segue exemplo:
 
 
 ```
-nome=Igor arquivoLarguraFixaClientes=file:files/clientes-largura-fixa.txt arquivoDelimitadoClientes=file:files/clientes-delimitado.txt
+nome=Igor arquivoLarguraFixaClientes=file:files/clientes-largura-fixa.txt arquivoDelimitadoClientes=file:files/clientes-delimitado.txt arquivoMultiplosFormatosClientes=file:files/clientes-multiplos-formatos.txt arquivosClientes=file:files/clientes-multiplos-formatos*
 ```
 
 Há um script de consultas [aqui](./consultas-metadados-spring-batch.sql), de metadados do spring batch que serão gravados no h2.
