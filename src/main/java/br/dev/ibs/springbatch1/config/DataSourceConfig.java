@@ -5,6 +5,9 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 import javax.sql.DataSource;
 
@@ -20,7 +23,12 @@ public class DataSourceConfig {
 	
 	@Bean
 	@ConfigurationProperties(prefix = "app.datasource")
-	public DataSource appDataSource() {
-		return DataSourceBuilder.create().build();
+	public EmbeddedDatabase appDataSource() {
+		return new EmbeddedDatabaseBuilder()
+				       .setType(EmbeddedDatabaseType.H2)
+				       .addScript("schema-drop-h2.sql")
+				       .addScript("schema-h2.sql")
+				       .addScript("data-h2.sql")
+				       .build();
 	}
 }
